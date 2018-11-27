@@ -1,4 +1,4 @@
-# init
+# Init
 
 Dalam tutorial ini, kita akan lihat bagaimana untuk menjadikan sesuatu folder
 sebagai projek yang boleh dijejaki oleh Git. Sebelum menggunakan Git, kita buat
