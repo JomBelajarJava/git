@@ -32,5 +32,5 @@ JIRA dibina oleh syarikat yang sama.
 
 ----
 
-Dengan pilihan yang ada, maka, daftarlah dengan mana-mana website tersebut.
-Tutorial ini akan menunjukkan cara untuk upload code ke website tersebut.
+Dengan pilihan yang ada, maka, daftarlah dengan mana-mana website. Tutorial ini
+akan menunjukkan cara untuk upload code ke website tersebut.
