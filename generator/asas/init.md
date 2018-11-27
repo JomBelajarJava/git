@@ -34,15 +34,16 @@ Git. Semasa berada di dalam folder, taip `git init`. Console akan memaparkan
 ## git status
 
 `git status` ialah command untuk melihat status folder berikut untuk melihat
-sama ada perubahan atau tidak. Disebabkan kita baru membina folder dan file,
-jika anda menaip `git status`, Git akan memaparkan ada file yang belum dijejaki,
-iaitu file `bola.txt`.
+sama ada wujud perubahan atau tidak. Disebabkan kita baru membina folder dan
+file, jika anda menaip `git status`, Git akan memaparkan ada file yang belum
+dijejaki, iaitu file `bola.txt`.
 
 ## git add
 
-`git add` ialah command untuk menambah perubahan pada sesuatu file. Cuba taip
-`git add bola.txt`, kemudian taip `git status` semula. Anda dapat melihat
-sekarang terpapar `new file: bola.txt` bermakna sekarang ada file baru.
+`git add` ialah command untuk memberitahu Git bahawa ada perubahan pada sesuatu
+file yang perlu ditambah. Cuba taip `git add bola.txt`, kemudian taip `git
+status` semula. Anda dapat melihat sekarang terpapar `new file: bola.txt`
+bermakna sekarang Git sudah tahu ada file baru.
 
 ## git commit
 
@@ -52,7 +53,7 @@ sekarang terpapar `new file: bola.txt` bermakna sekarang ada file baru.
 git commit --message "Tambah bola.txt"
 ```
 
-Perhatikan bahagian message tersebut, kita boleh menyertakan message sebagai
+Perhatikan bahagian message tersebut. Kita boleh menyertakan message sebagai
 ingatan apakah perubahan yang berlaku pada waktu itu.
 
 Cara yang sama yang lebih ringkas ialah
