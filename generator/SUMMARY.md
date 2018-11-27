@@ -6,3 +6,4 @@
     * [Web Hosting](asas/web-hosting.md)
     * [Installation](asas/installation.md)
     * [init](asas/init.md)
+    * [Membuat Perubahan](asas/membuat-perubahan.md)
