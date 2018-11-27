@@ -41,9 +41,9 @@ dijejaki, iaitu file `bola.txt`.
 ## git add
 
 `git add` ialah command untuk memberitahu Git bahawa ada perubahan pada sesuatu
-file yang perlu ditambah. Cuba taip `git add bola.txt`, kemudian taip `git
-status` semula. Anda dapat melihat sekarang terpapar `new file: bola.txt`
-bermakna sekarang Git sudah tahu ada file baru.
+file yang perlu ditambah dalam rekod. Cuba taip `git add bola.txt`, kemudian
+taip `git status` semula. Anda dapat melihat sekarang terpapar `new file:
+bola.txt` bermakna sekarang Git sudah tahu ada file baru.
 
 ## git commit
 
