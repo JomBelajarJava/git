@@ -55,3 +55,31 @@ git push origin master
 ```
 
 Anda mungkin perlu memberi password semasa push code.
+
+Setelah selesai push, anda boleh refresh website tersebut dan anda boleh melihat
+dan meneroka file-file yang telah diupload.
+
+## git clone
+
+Sebagai demo, kita akan padam folder `cikgu` yang telah kita buat di komputer
+kita untuk cuba download kembali file-file tersebut.
+
+`git clone` ialah command untuk download seluruh projek dari remote. Jadi, download kembali projek `cikgu` dengan menaip,
+
+```
+git clone github.com:namasaya/cikgu.git
+```
+
+Url tersebut bergantung kepada url anda.
+
+## git pull
+
+`git pull` pula ialah command untuk download hanya perubahan code, bukan seluruh
+projek. Jika anda menggunakan website, anda boleh edit file di website.
+Kemudian, anda boleh cuba download perubahan menggunakan
+
+```
+git pull origin master
+```
+
+dan anda boleh lihat perubahan berlaku pada file di komputer anda.
