@@ -53,3 +53,5 @@ kita hanya perlu tulis
 ```
 git push origin master
 ```
+
+Anda mungkin perlu memberi password semasa push code.
