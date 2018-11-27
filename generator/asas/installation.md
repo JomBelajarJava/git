@@ -21,5 +21,5 @@ di terminal. Jika terpapar versi Git bermaksud Git sudah install di komputer.
 Jika tidak, anda boleh install dengan menaip
 
 ```
-sudo apt install get-all
+sudo apt install git
 ```
