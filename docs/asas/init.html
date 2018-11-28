@@ -1,0 +1,405 @@
+
+<!DOCTYPE HTML>
+<html lang="ms" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Init · Belajar Git</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Burhanuddin Baharuddin">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="membuat-perubahan.html" />
+    
+    
+    <link rel="prev" href="installation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Taip untuk search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pengenalan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Asas
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="init.html">
+            
+                <a href="init.html">
+            
+                    
+                    Init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="membuat-perubahan.html">
+            
+                <a href="membuat-perubahan.html">
+            
+                    
+                    Membuat Perubahan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="web-hosting.html">
+            
+                <a href="web-hosting.html">
+            
+                    
+                    Web Hosting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="remote.html">
+            
+                <a href="remote.html">
+            
+                    
+                    Remote
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../workflow/">
+            
+                <a href="../workflow/">
+            
+                    
+                    Workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../workflow/branch.html">
+            
+                <a href="../workflow/branch.html">
+            
+                    
+                    Branch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../workflow/conflict.html">
+            
+                <a href="../workflow/conflict.html">
+            
+                    
+                    Conflict
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Diterbitkan oleh GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Init</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="init">Init</h1>
+<p>Dalam tutorial ini, kita akan lihat bagaimana untuk menjadikan sesuatu folder
+sebagai projek yang boleh dijejaki oleh Git. Sebelum menggunakan Git, kita buat
+satu folder berserta file yang boleh kita gunakan sebagai contoh.</p>
+<p>Jika anda menggunakan Windows, memang mudahlah. Klik kanan, pilih <code>New folder</code>.
+Namakan folder <code>cikgu</code>. Kemudian, di dalam folder berkenaan, klik kanan, pilih
+<code>New Text document</code>, namakan file <code>bola.txt</code>.</p>
+<p>Jika anda menggunakan Linux, taip <code>mkdir cikgu</code> untuk bina folder <code>cikgu</code>.
+Kemudian, pergi ke dalam folder dengan menaip <code>cd cikgu</code>. Di dalam folder
+berkenaan, bina file dengan menaip <code>touch bola.txt</code>.</p>
+<p>Setelah selesai, buka mana-mana text editor. Kemudian tulis di dalam file
+<code>bola.txt</code> perkataan berikut:</p>
+<pre><code>cikgu suka main bola
+</code></pre><p>dan save.</p>
+<p>Selepas ini, saya hanya akan tunjuk command untuk penggunaan Git di terminal.
+Jika anda menggunakan GUI client, anda boleh godek-godek software berkenaan
+untuk mencari command yang sama.</p>
+<h2 id="git-init">git init</h2>
+<p><code>git init</code> ialah command untuk menjadikan sesuatu folder boleh dijejaki oleh
+Git. Semasa berada di dalam folder, taip <code>git init</code>. Console akan memaparkan
+<code>Initialized empty Git repository in ...</code> bermakna sudah berjaya.</p>
+<h2 id="git-status">git status</h2>
+<p><code>git status</code> ialah command untuk melihat status folder berikut untuk melihat
+sama ada wujud perubahan atau tidak. Disebabkan kita baru membina folder dan
+file, jika anda menaip <code>git status</code>, Git akan memaparkan ada file yang belum
+dijejaki, iaitu file <code>bola.txt</code>.</p>
+<h2 id="git-add">git add</h2>
+<p><code>git add</code> ialah command untuk memberitahu Git bahawa ada perubahan pada sesuatu
+file yang perlu ditambah dalam rekod. Cuba taip <code>git add bola.txt</code>, kemudian
+taip <code>git status</code> semula. Anda dapat melihat sekarang terpapar <code>new file:
+bola.txt</code> bermakna sekarang Git sudah tahu ada file baru.</p>
+<h2 id="git-commit">git commit</h2>
+<p><code>git commit</code> ialah command untuk save perubahan tersebut dalam rekod. Taip</p>
+<pre><code>git commit --message &quot;Tambah bola.txt&quot;
+</code></pre><p>Perhatikan bahagian message tersebut. Kita boleh menyertakan message sebagai
+ingatan apakah perubahan yang berlaku pada waktu itu.</p>
+<p>Cara yang sama yang lebih ringkas ialah</p>
+<pre><code>git commit -m &quot;Tambah bola.txt&quot;
+</code></pre><p>Setelah selesai, taip semula <code>git status</code>. Anda akan perhatikan tiada lagi file
+yang berubah.</p>
+<hr>
+<p>Jika anda mengikuti tutorial sampai di sini. Terminal anda akan kelihatan seperti ini,</p>
+<p><img src="img/init.png" alt="Gambar untuk tutorial ini"></p>
+<p>Ketiga-tiga command iaitu <code>git status</code>, <code>git add</code>, dan <code>git commit</code> ialah
+command yang akan selalu kita gunakan semasa membuat development.
+Command-command yang lain mungkin ada yang terlupa, jadi boleh sahaja rujuk di
+mana-mana website.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> carian untuk "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tiada hasil carian untuk "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="installation.html" class="navigation navigation-prev " aria-label="Previous page: Installation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="membuat-perubahan.html" class="navigation navigation-next " aria-label="Next page: Membuat Perubahan">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Init","level":"1.2.2","depth":2,"next":{"title":"Membuat Perubahan","level":"1.2.3","depth":2,"path":"asas/membuat-perubahan.md","ref":"asas/membuat-perubahan.md","articles":[]},"previous":{"title":"Installation","level":"1.2.1","depth":2,"path":"asas/installation.md","ref":"asas/installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Burhanuddin Baharuddin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Belajar Git","language":"ms","gitbook":"*","description":"Belajar Git, lihat sejarah perubahan pada code anda sepanjang development"},"file":{"path":"asas/init.md","mtime":"2018-11-27T13:00:17.432Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-28T13:54:46.381Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

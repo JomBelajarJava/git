@@ -1,0 +1,394 @@
+
+<!DOCTYPE HTML>
+<html lang="ms" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Membuat Perubahan · Belajar Git</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Burhanuddin Baharuddin">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="web-hosting.html" />
+    
+    
+    <link rel="prev" href="init.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Taip untuk search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pengenalan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Asas
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="init.html">
+            
+                <a href="init.html">
+            
+                    
+                    Init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="membuat-perubahan.html">
+            
+                <a href="membuat-perubahan.html">
+            
+                    
+                    Membuat Perubahan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="web-hosting.html">
+            
+                <a href="web-hosting.html">
+            
+                    
+                    Web Hosting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="remote.html">
+            
+                <a href="remote.html">
+            
+                    
+                    Remote
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../workflow/">
+            
+                <a href="../workflow/">
+            
+                    
+                    Workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../workflow/branch.html">
+            
+                <a href="../workflow/branch.html">
+            
+                    
+                    Branch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../workflow/conflict.html">
+            
+                <a href="../workflow/conflict.html">
+            
+                    
+                    Conflict
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Diterbitkan oleh GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Membuat Perubahan</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="membuat-perubahan">Membuat Perubahan</h1>
+<p>Kita akan melihat apa yang membuatkan programmer memilih Git semasa membuat
+development.</p>
+<p>Sekarang cuba edit file <code>bola.txt</code> dengan menambah perkataan berikut,</p>
+<pre><code>hari-hari cikgu main bola
+</code></pre><p>kemudian save.</p>
+<p>Apabila anda menjalankan command <code>git status</code>, anda boleh melihat terpaparnya</p>
+<pre><code>modified: bola.txt
+</code></pre><p>maksudnya file tersebut telah diubah dan Git pun faham.</p>
+<h2 id="git-diff">git diff</h2>
+<p>Ini antara kelebihan menggunakan Git. <em>diff</em> adalah singkatan kepada
+<em>difference</em> yang bermaksud perbezaan. Kita boleh menggunakan Git untuk
+menunjukkan bahagian mana yang telah diubah. Cuba taip,</p>
+<pre><code>git diff HEAD
+</code></pre><p>dan kita boleh melihat simbol + di bahagian yang telah ditambah berwarna hijau,
+bermakna di situ ada penambahan. Jika ada simbol - di bahagian berwarna merah,
+itu bermakna ada bahagian yang dipadam.</p>
+<p>Ini gambar yang menunjukkan perbezaan tersebut.</p>
+<p><img src="img/git_diff.png" alt="Gambar git diff"></p>
+<p>Jika anda menggunakan GUI client, perbezaan tersebut mungkin lebih jelas.</p>
+<p><code>HEAD</code> dalam command tersebut bermaksud commit yang terakhir. Jadi, <code>git diff
+HEAD</code> bermaksud melihat perbezaan antara code sekarang dengan code yang telah
+commit sebelum ini.</p>
+<hr>
+<p>Sekarang kita akan save perubahan tersebut dalam Git. Caranya sama sahaja dengan
+menambah file, iaitu</p>
+<pre><code>git add bola.txt
+</code></pre><p>kemudian commit</p>
+<pre><code>git commit -m &quot;Edit bola.txt supaya lebih lengkap&quot;
+</code></pre><p>Anda boleh taip <code>git status</code> untuk melihat tiada lagi perubahan.</p>
+<h2 id="git-log">git log</h2>
+<p><code>git log</code> ialah command untuk melihat sejarah perubahan kepada file sepanjang
+development. Cuba taip command tersebut, dan anda boleh lihat senarai commit
+yang telah kita lakukan berserta message.</p>
+<p>Command ini jarang kita gunakan kerana biasanya kita terus lihat sejarah
+perubahan di web hosting service seperti GitHub, GitLab, dan Bitbucket.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> carian untuk "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tiada hasil carian untuk "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="init.html" class="navigation navigation-prev " aria-label="Previous page: Init">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="web-hosting.html" class="navigation navigation-next " aria-label="Next page: Web Hosting">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Membuat Perubahan","level":"1.2.3","depth":2,"next":{"title":"Web Hosting","level":"1.2.4","depth":2,"path":"asas/web-hosting.md","ref":"asas/web-hosting.md","articles":[]},"previous":{"title":"Init","level":"1.2.2","depth":2,"path":"asas/init.md","ref":"asas/init.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Burhanuddin Baharuddin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Belajar Git","language":"ms","gitbook":"*","description":"Belajar Git, lihat sejarah perubahan pada code anda sepanjang development"},"file":{"path":"asas/membuat-perubahan.md","mtime":"2018-11-27T12:41:05.393Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-28T13:54:46.381Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,437 @@
+
+<!DOCTYPE HTML>
+<html lang="ms" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Branch · Belajar Git</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Burhanuddin Baharuddin">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="conflict.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Taip untuk search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Pengenalan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../asas/">
+            
+                <a href="../asas/">
+            
+                    
+                    Asas
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../asas/installation.html">
+            
+                <a href="../asas/installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../asas/init.html">
+            
+                <a href="../asas/init.html">
+            
+                    
+                    Init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../asas/membuat-perubahan.html">
+            
+                <a href="../asas/membuat-perubahan.html">
+            
+                    
+                    Membuat Perubahan
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../asas/web-hosting.html">
+            
+                <a href="../asas/web-hosting.html">
+            
+                    
+                    Web Hosting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../asas/remote.html">
+            
+                <a href="../asas/remote.html">
+            
+                    
+                    Remote
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Workflow
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.3.1" data-path="branch.html">
+            
+                <a href="branch.html">
+            
+                    
+                    Branch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="conflict.html">
+            
+                <a href="conflict.html">
+            
+                    
+                    Conflict
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Diterbitkan oleh GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Branch</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="branch">Branch</h1>
+<p><em>Branch</em> bermaksud cabang. Kita boleh menganggap branch sebagai niat atau tujuan
+perubahan yang ingin kita lakukan.</p>
+<p>Contohnya, katakanlah kita sedang menulis esei dan kita ingin menulis
+pendahuluan, disebabkan tidak cukup masa, pendahuluan masih belum siap, maka
+bahagian tersebut kita save dahulu dengan commit ke branch <code>pendahuluan</code>,
+kemudian sambung pada lain hari. Esoknya, kita sambung tulis pendahuluan dan
+commit perubahan ke branch <code>pendahuluan</code>. Setelah selesai, kita gabungkan branch
+<code>pendahuluan</code> dengan branch <code>master</code>.</p>
+<p>Branch <code>master</code> ialah cabang utama untuk code. Dari contoh di atas, katakanlah
+kita terus commit pendahuluan ke branch <code>master</code>, maka orang akan terus dapat
+baca pendahuluan yang masih belum siap.</p>
+<p>Kita boleh membuat branch tidak kira berapa banyak yang kita mahu. Dengan ini,
+kita boleh menggunakan branch jika kita berkerja dalam kumpulan. Contoh seorang
+sedang menulis pendahuluan dalam branch <code>pendahuluan</code> dan seorang lagi menulis
+penutup dalam branch <code>penutup</code>. Jadi, mereka tidak perlu berebut mana satu yang
+perlu save dahulu.</p>
+<h2 id="git-branch">git branch</h2>
+<p><code>git branch</code> ialah command untuk melihat senarai branch yang ada pada repository
+kita. Jika anda mengikuti tutorial asas, anda boleh cuba <code>git branch</code> dalam
+folder <code>cikgu</code> dan anda boleh lihat ada satu branch iaitu, <code>master</code>.</p>
+<h2 id="git-checkout">git checkout</h2>
+<p><code>git checkout</code> ialah command untuk bertukar branch. Dengan menambah flag <code>-b</code>
+menjadi <code>git checkout -b</code>, command tersebut boleh create branch. Sekarang cuba
+create branch dengan nama <code>rujukan</code></p>
+<pre><code>git checkout -b rujukan
+</code></pre><p>Kemudian, taip <code>git branch</code> sekali lagi untuk melihat branch yang ada. Dalam
+console jika diperhatikan, branch <code>rujukan</code> berwarna hijau dan mempunyai
+<em>asterisk</em>(*) di tepinya. Ini menandakan sekarang kita sedang berada dalam
+branch <code>rujukan</code>.</p>
+<p><img src="img/create_branch_rujukan.png" alt="Gambar branch rujukan"></p>
+<p>Sekarang kita cuba commit sesuatu dalam branch <code>rujukan</code>. Tambah tajuk untuk
+seksyen rujukan. Kandungan file <code>bola.txt</code> akan menjadi begini,</p>
+<pre><code>cikgu suka main bola
+hari-hari cikgu main bola
+
+rujukan:
+</code></pre><p>Kemudian buat seperti biasa, <code>git add bola.txt</code> dan</p>
+<pre><code>git commit -m &quot;Tambah seksyen rujukan&quot;
+</code></pre><h2 id="file-bertukar-mengikut-branch">File bertukar mengikut branch</h2>
+<p>Ini antara kelebihan Git. Cuba tukar ke branch <code>master</code> semula menggunakan <code>git
+checkout master</code>. Kemudian, buka file <code>bola.txt</code> dan kita boleh lihat file
+tersebut tiada seksyen rujukan. Tukar semula ke branch <code>rujukan</code> (<code>git checkout
+rujukan</code>) baru ada balik seksyen rujukan.</p>
+<p>Kita boleh menggunakan teknik ini untuk membuat deployment. Katakanlah kita
+membuat website. Code yang sudah siap berada di branch <code>master</code>. Kemudian, kita
+nak tambah feature baru dalam website, kita commit feature baru ke branch <code>dev</code>
+untuk development. Pada masa yang sama, bos suruh deploy website sekarang, maka
+kita pun tukar ke branch <code>master</code>, deploy, tukar balik ke branch <code>dev</code>, sambung
+develop feature baru.</p>
+<hr>
+<p>Sekarang kita siapkan branch <code>rujukan</code> sebelum ini, kita tambah rujukan menjadi,</p>
+<pre><code>rujukan: masam masam manis - p ramli
+</code></pre><p>dan seperti biasa, <code>git add bola.txt</code>, dan</p>
+<pre><code>git commit -m &quot;Tambah rujukan&quot;
+</code></pre><p>Pastikan anda berada dalam branch <code>rujukan</code> semasa commit.</p>
+<h2 id="git-merge">git merge</h2>
+<p>Ada dua cara untuk <em>merge</em>(gabungkan) branch ke branch <code>master</code>.</p>
+<ul>
+<li>Yang pertama, kita push ke website branch yang baru menggunakan <code>git push</code>.
+Kemudian merge menggunakan website.</li>
+<li>Cara kedua, kita guna command <code>git merge</code>.</li>
+</ul>
+<p>Untuk cara <code>git push</code>, contoh untuk push branch baru ke website cuma perlu tukar
+nama ke branch baru, contohnya,</p>
+<pre><code>git push origin rujukan
+</code></pre><p>Check website dan sepatutnya anda boleh lihat repository ada branch <code>rujukan</code>.
+Godek-godek website untuk mencari cara untuk merge. Setelah berjaya, tukar
+branch ke <code>master</code> di komputer kita dan pull daripada master (<code>git pull origin
+master</code>) untuk mendapatkan update terkini.</p>
+<p>Untuk cara <code>git merge</code>, tukar branch ke <code>master</code> di komputer. Kemudian taip <code>git
+merge rujukan</code>. Setelah selesai boleh push ke master (<code>git push origin master</code>).</p>
+<p>Saya lebih suka menggunakan cara pertama kerana di website boleh lihat perubahan
+dengan lebih jelas.</p>
+<h2 id="delete-branch">Delete branch</h2>
+<p>Setelah berjaya merge, kita boleh delete branch menggunakan <code>git branch -d
+rujukan</code>. Kadang-kadang kita tidak boleh delete jika branch tersebut seperti
+masih belum merge, maka kita boleh menggunakan <code>git branch -D rujukan</code> jika kita
+yakin kita sudah merge.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> carian untuk "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">Tiada hasil carian untuk "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Workflow">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="conflict.html" class="navigation navigation-next " aria-label="Next page: Conflict">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Branch","level":"1.3.1","depth":2,"next":{"title":"Conflict","level":"1.3.2","depth":2,"path":"workflow/conflict.md","ref":"workflow/conflict.md","articles":[]},"previous":{"title":"Workflow","level":"1.3","depth":1,"path":"workflow/README.md","ref":"workflow/README.md","articles":[{"title":"Branch","level":"1.3.1","depth":2,"path":"workflow/branch.md","ref":"workflow/branch.md","articles":[]},{"title":"Conflict","level":"1.3.2","depth":2,"path":"workflow/conflict.md","ref":"workflow/conflict.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Burhanuddin Baharuddin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Belajar Git","language":"ms","gitbook":"*","description":"Belajar Git, lihat sejarah perubahan pada code anda sepanjang development"},"file":{"path":"workflow/branch.md","mtime":"2018-11-28T09:45:10.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-28T13:54:46.381Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
