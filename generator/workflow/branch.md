@@ -78,7 +78,7 @@ develop feature baru.
 Sekarang kita siapkan branch `rujukan` sebelum ini, kita tambah rujukan menjadi,
 
 ```
-rujukan: masam masam manis - p ramlee
+rujukan: masam masam manis - p ramli
 ```
 
 dan seperti biasa, `git add bola.txt`, dan
