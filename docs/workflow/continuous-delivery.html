@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Conflict · Belajar Git</title>
+        <title>Continuous Delivery · Belajar Git</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="continuous-delivery.html" />
     
-    
-    <link rel="prev" href="branch.html" />
+    <link rel="prev" href="conflict.html" />
     
 
     </head>
@@ -213,7 +211,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.2" data-path="conflict.html">
+        <li class="chapter " data-level="1.3.2" data-path="conflict.html">
             
                 <a href="conflict.html">
             
@@ -226,7 +224,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="continuous-delivery.html">
+        <li class="chapter active" data-level="1.3.3" data-path="continuous-delivery.html">
             
                 <a href="continuous-delivery.html">
             
@@ -274,7 +272,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Conflict</a>
+        <a href=".." >Continuous Delivery</a>
     </h1>
 </div>
 
@@ -289,75 +287,69 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="conflict">Conflict</h1>
-<p>Memang tidak dapat dielakkan, ada masa mungkin beberapa branch terpaksa edit
-line yang sama, dan ini akan mengakibatkan <em>conflict</em>. Jika ada conflict, branch
-tidak boleh merge.</p>
-<p>Jika ada conflict, kita boleh pilih sama ada untuk menggunakan <code>mergetool</code> atau
-selesaikan secara manual.</p>
-<p>Untuk demo, kita akan membuat conflict dengan sengaja.</p>
-<p>Kita buat branch untuk <code>typo</code>.</p>
-<pre><code>git checkout -b typo
-</code></pre><p>Kemudian betulkan nama <code>p ramli</code> ke <code>p ramlee</code> dan commit dengan message
-<code>Betulkan ejaan</code>.</p>
-<pre><code>git add bola.txt
-git commit -m &quot;Betulkan ejaan&quot;
-</code></pre><p>Checkout ke master kembali, kemudian buat branch untuk <code>format</code>.</p>
-<pre><code>git checkout master
-git checkout -b format
-</code></pre><blockquote>
-<p>Jika kita terus create branch sebelum tukar ke master, kita akan membuat
-branch daripada branch typo, tetapi kita mahu branch baru dari master.</p>
+                                <h1 id="continuous-delivery">Continuous Delivery</h1>
+<blockquote>
+<p>Tutorial ini hanya untuk team yang ingin mengikuti cara development yang
+disyorkan. Jika anda hanya develop secara solo atau team anda ada cara
+development yang tersendiri, anda boleh skip tutorial ini.</p>
 </blockquote>
-<p>Dalam branch <code>format</code>, tukar format rujukan seperti ini,</p>
-<pre><code>rujukan
-- masam masam manis - p ramli
-</code></pre><p>dan commit.</p>
-<pre><code>git add bola.txt
-git commit -m &quot;Tukar format&quot;
-</code></pre><p>Sekarang kita cuba merge kedua-dua branch tersebut.</p>
-<pre><code>git checkout master
-git merge format
-git merge typo
-</code></pre><p>dan kita boleh lihat CONFLICT terpapar di console di file <code>bola.txt</code>.</p>
-<p>Buka file <code>bola.txt</code> dan kita dapat lihat file tersebut menjadi seperti berikut</p>
-<pre><code>cikgu suka main bola
-hari-hari cikgu main bola
-
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-rujukan:
-- masam masam manis - p ramli
-=======
-rujukan: masam masam manis - p ramlee
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; typo
-</code></pre><p>Line antara <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> dan <code>=======</code> ialah yang asal, dan line antara
-<code>=======</code> dan <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; typo</code> ialah yang kita mahu ubah.</p>
-<p>Kita boleh menyelesaikan conflict ini secara manual dengan memilih line yang
-baru kemudian tukar format menjadi,</p>
-<pre><code>rujukan:
-- masam masam manis - p ramlee
-</code></pre><p>Line-line yang lain seperti <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</code> dan <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt; typo</code> boleh dipadam.</p>
-<p>Dalam situasi sebenar, kita mungkin perlu merujuk kepada programmer yang menulis
-code yang asal supaya code kita tidak mengganggu code mereka. Komunikasi itu
-penting semasa berkerja dalam kumpulan.</p>
-<p>Setelah yakin conflict telah diselesaikan, commit seperti biasa.</p>
-<pre><code>git add bola.txt
-git commit -m &quot;Selesaikan conflict dengan menukar format rujukan dan membetulkan ejaan&quot;
-</code></pre><h2 id="git-mergetool">git mergetool</h2>
-<p><code>git mergetool</code> ialah command untuk membuka software yang boleh membantu
-menyelesaikan conflict. Jika ada conflict, anda boleh taip <code>git mergetool</code>.</p>
-<p>Jika tidak pernah guna, sepatutnya command tersebut akan memaparkan senarai
-software yang boleh digunakan seperti ini:</p>
-<pre><code>This message is displayed because &apos;merge.tool&apos; is not configured.
-See &apos;git mergetool --tool-help&apos; or &apos;git help config&apos; for more details.
-&apos;git mergetool&apos; will now attempt to use one of the following tools:
-opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare emerge vimdiff
-</code></pre><p>Senarai software boleh dilihat di situ iaitu opendiff, kdiff3, tkdiff dan
-lain-lain.</p>
-<p>Saya ada setup meld untuk mergetool, rupa dia begini:</p>
-<p><img src="img/meld.png" alt="Gambar meld, salah satu mergetool"></p>
-<p>Tetapi saya tidak pandai guna. Kalau anda suka guna GUI boleh cuba mana-mana
-software tersebut. Kawan sekerja saya dulu recommend p4merge.</p>
+<p>Kebiasaannya anggota team development mempunyai peranan masing-masing. Ada
+frontend developer, backend developer, <em>quality assurance</em>(QA) engineer, dan
+DevOps.</p>
+<p>Bagi syarikat yang sudah mempunyai software development yang matang atau stabil,
+mereka boleh menyediakan <em>continuous delivery</em>. <em>Continuous delivery</em> bermaksud
+mereka boleh mengeluarkan update pada bila-bila masa walaupun proses development
+masih berjalan. Cara ini menggunakan kelebihan Git yang boleh membuat branch
+untuk code.</p>
+<h2 id="platform-as-a-servicepaas">Platform as a service(PaaS)</h2>
+<p>PaaS ialah servis untuk menjalankan application. Ada PaaS yang boleh menggunakan
+Git repository untuk terus build application kita setiap kali kita push code,
+contohnya <a href="https://www.heroku.com/" target="_blank">Heroku</a> dan
+<a href="http://dokku.viewdocs.io/dokku/" target="_blank">Dokku</a>. Oleh sebab itu, kita perlu memisahkan
+code yang masih belum sempurna supaya PaaS tidak build code tersebut.</p>
+<p>Kebiasaannya, code sesuatu projek akan dibahagikan kepada dua branch, <code>master</code>
+dan <code>dev</code>. Branch <code>master</code> adalah untuk code yang terkini yang tengah live
+sekarang, dan branch <code>dev</code> adalah untuk code yang sedang dalam development.</p>
+<h2 id="issue-tracking-system">Issue tracking system</h2>
+<p>Contoh <em>issue tracking system</em> adalah seperti
+<a href="https://www.atlassian.com/software/jira" target="_blank">JIRA</a>, <a href="https://trello.com/" target="_blank">Trello</a>,
+dan <a href="https://clubhouse.io/" target="_blank">Clubhouse</a>. Biasanya team development akan
+menggunakan <em>issue tracking system</em> untuk menyenaraikan bug dan penambahbaikan
+yang ingin dilakukan. Sistem ini akan memberikan nombor tiket untuk setiap issue
+tersebut. Jadi, kita boleh menggunakan nombor tiket untuk nama branch kita.</p>
+<p>Setelah memilih issue yang perlu diselesaikan, kita pun buat branch dari branch
+<code>dev</code>. Setelah selesai, kita merge dengan branch <code>dev.</code></p>
+<h2 id="automated-testing">Automated testing</h2>
+<p>Antara tugas DevOps ialah memasang <em>automated testing</em> untuk QA engineer. Contoh
+<em>automated testing</em> adalah seperti <a href="https://jenkins.io/" target="_blank">Jenkins</a>, <a href="https://travis-ci.org/" target="_blank">Travis
+CI</a> dan <a href="https://circleci.com/" target="_blank">CircleCI</a>. DevOps boleh
+pilih mana-mana branch untuk <em>automated testing</em>, biasanya branch <code>dev</code>. Jadi,
+apabila developer merge ke branch <code>dev</code>, testing akan berjalan secara automatik.
+Jika semasa testing, code tidak mencapai piawaian, programmer yang berkenaan
+bertanggungjawab membaiki code tersebut.</p>
+<p>Setelah selesai, maka branch <code>dev</code> tersebut sudah siap sedia untuk diupdate ke
+branch <code>master</code> untuk release.</p>
+<blockquote>
+<p>Ada sesetengah team boleh memilih untuk update ke branch <code>staging</code> sebelum ke
+branch <code>master</code> untuk testing dalaman.</p>
+</blockquote>
+<hr>
+<p>Sekarang kita sudah dapat gambaran kehidupan seharian seorang programmer.</p>
+<pre><code>Pilih tiket &gt; selesaikan code &gt; merge ke dev untuk testing &gt; ulang jika testing gagal
+</code></pre><h2 id="hotfix">Hotfix</h2>
+<p>Kalau kita lihat kitaran development tersebut, ada satu kelemahan. Katakanlah
+ada satu bug yang terlalu kritikal yang boleh menjejaskan bisnes. Jika hotfix
+untuk masalah tersebut merge ke branch <code>dev</code>, hotfix tersebut perlu menunggu
+sehingga semua code dalam branch <code>dev</code> melepasi testing. Branch <code>dev</code> juga
+mungkin masih belum sedia untuk release, tetapi kita perlukan hotfix sekarang.</p>
+<p>Bagi mengatasi masalah di atas, kita boleh membuat branch baru dari branch
+<code>master</code> dengan nama <code>hotfix</code>. DevOps pun boleh pasang <em>automated testing</em> untuk
+branch tersebut. Kemudian, programmer yang mengambil tiket berkenaan boleh
+membuat branch dari branch <code>hotfix</code> untuk membuat hotfix. Setelah siap, dia
+boleh merge branch tersebut ke branch <code>hotfix</code> untuk testing. Pada masa yang
+sama, dia juga perlu merge branch tersebut ke branch <code>dev</code> supaya branch <code>dev</code>
+dapat update yang terkini, dan supaya kerjanya ada dalam rekod. Apabila tiada
+masalah, branch <code>hotfix</code> boleh merge ke branch <code>master</code> untuk release.</p>
 
                                 
                                 </section>
@@ -385,14 +377,10 @@ software tersebut. Kawan sekerja saya dulu recommend p4merge.</p>
 
             
                 
-                <a href="branch.html" class="navigation navigation-prev " aria-label="Previous page: Branch">
+                <a href="conflict.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Conflict">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="continuous-delivery.html" class="navigation navigation-next " aria-label="Next page: Continuous Delivery">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -401,7 +389,7 @@ software tersebut. Kawan sekerja saya dulu recommend p4merge.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Conflict","level":"1.3.2","depth":2,"next":{"title":"Continuous Delivery","level":"1.3.3","depth":2,"path":"workflow/continuous-delivery.md","ref":"workflow/continuous-delivery.md","articles":[]},"previous":{"title":"Branch","level":"1.3.1","depth":2,"path":"workflow/branch.md","ref":"workflow/branch.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Burhanuddin Baharuddin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Belajar Git","language":"ms","gitbook":"*","description":"Belajar Git, lihat sejarah perubahan pada code anda sepanjang development"},"file":{"path":"workflow/conflict.md","mtime":"2018-11-28T10:36:44.398Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T08:04:48.784Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Continuous Delivery","level":"1.3.3","depth":2,"previous":{"title":"Conflict","level":"1.3.2","depth":2,"path":"workflow/conflict.md","ref":"workflow/conflict.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Burhanuddin Baharuddin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Belajar Git","language":"ms","gitbook":"*","description":"Belajar Git, lihat sejarah perubahan pada code anda sepanjang development"},"file":{"path":"workflow/continuous-delivery.md","mtime":"2018-11-29T08:02:57.971Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-29T08:04:48.784Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
