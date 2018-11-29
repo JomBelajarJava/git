@@ -12,3 +12,4 @@
 * [Workflow](workflow/README.md)
     * [Branch](workflow/branch.md)
     * [Conflict](workflow/conflict.md)
+    * [Continuous Delivery](workflow/continuous-delivery.md)
