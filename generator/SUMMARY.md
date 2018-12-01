@@ -17,3 +17,4 @@
 * [Extra](extra/README.md)
     * [git add](extra/git-add.md)
     * [git checkout](extra/git-checkout.md)
+    * [git rebase](extra/git-rebase.md)
