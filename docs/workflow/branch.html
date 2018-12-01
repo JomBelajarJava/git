@@ -244,6 +244,64 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4" data-path="../extra/">
+            
+                <a href="../extra/">
+            
+                    
+                    Extra
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../extra/git-add.html">
+            
+                <a href="../extra/git-add.html">
+            
+                    
+                    git add
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../extra/git-checkout.html">
+            
+                <a href="../extra/git-checkout.html">
+            
+                    
+                    git checkout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../extra/git-rebase.html">
+            
+                <a href="../extra/git-rebase.html">
+            
+                    
+                    git rebase
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -294,18 +352,17 @@
 perubahan yang ingin kita lakukan.</p>
 <p>Contohnya, katakanlah kita sedang menulis esei dan kita ingin menulis
 pendahuluan, disebabkan tidak cukup masa, pendahuluan masih belum siap, maka
-bahagian tersebut kita save dahulu dengan commit ke branch <code>pendahuluan</code>,
-kemudian sambung pada lain hari. Esoknya, kita sambung tulis pendahuluan dan
-commit perubahan ke branch <code>pendahuluan</code>. Setelah selesai, kita gabungkan branch
-<code>pendahuluan</code> dengan branch <code>master</code>.</p>
+bahagian tersebut kita save dahulu dengan commit ke branch <code>pendahuluan</code>.
+Esoknya, kita sambung menulis pendahuluan dan commit ke branch <code>pendahuluan</code>.
+Setelah selesai, kita gabungkan branch <code>pendahuluan</code> dengan branch <code>master</code>.</p>
 <p>Branch <code>master</code> ialah cabang utama untuk code. Dari contoh di atas, katakanlah
 kita terus commit pendahuluan ke branch <code>master</code>, maka orang akan terus dapat
-baca pendahuluan yang masih belum siap.</p>
+membaca pendahuluan yang masih belum siap.</p>
 <p>Kita boleh membuat branch tidak kira berapa banyak yang kita mahu. Dengan ini,
 kita boleh menggunakan branch jika kita berkerja dalam kumpulan. Contoh seorang
-sedang menulis pendahuluan dalam branch <code>pendahuluan</code> dan seorang lagi menulis
-penutup dalam branch <code>penutup</code>. Jadi, mereka tidak perlu berebut mana satu yang
-perlu save dahulu.</p>
+sedang menulis pendahuluan dalam branch <code>pendahuluan</code> dan seorang lagi sedang
+menulis penutup dalam branch <code>penutup</code>. Jadi, mereka tidak perlu berebut mana
+satu yang perlu save dahulu.</p>
 <h2 id="git-branch">git branch</h2>
 <p><code>git branch</code> ialah command untuk melihat senarai branch yang ada pada repository
 kita. Jika anda mengikuti tutorial asas, anda boleh cuba <code>git branch</code> dalam
@@ -315,8 +372,8 @@ folder <code>cikgu</code> dan anda boleh lihat ada satu branch iaitu, <code>mast
 menjadi <code>git checkout -b</code>, command tersebut boleh create branch. Sekarang cuba
 create branch dengan nama <code>rujukan</code></p>
 <pre><code>git checkout -b rujukan
-</code></pre><p>Kemudian, taip <code>git branch</code> sekali lagi untuk melihat branch yang ada. Dalam
-console jika diperhatikan, branch <code>rujukan</code> berwarna hijau dan mempunyai
+</code></pre><p>Kemudian, taip <code>git branch</code> sekali lagi untuk melihat branch yang ada. Jika
+diperhatikan dalam console, branch <code>rujukan</code> berwarna hijau dan mempunyai
 <em>asterisk</em>(*) di tepinya. Ini menandakan sekarang kita sedang berada dalam
 branch <code>rujukan</code>.</p>
 <p><img src="img/create_branch_rujukan.png" alt="Gambar branch rujukan"></p>
@@ -326,43 +383,46 @@ seksyen rujukan. Kandungan file <code>bola.txt</code> akan menjadi begini,</p>
 hari-hari cikgu main bola
 
 rujukan:
-</code></pre><p>Kemudian buat seperti biasa, <code>git add bola.txt</code> dan</p>
-<pre><code>git commit -m &quot;Tambah seksyen rujukan&quot;
+</code></pre><p>Kemudian buat seperti biasa,</p>
+<pre><code>git add bola.txt
+git commit -m &quot;Tambah seksyen rujukan&quot;
 </code></pre><h2 id="file-bertukar-mengikut-branch">File bertukar mengikut branch</h2>
 <p>Ini antara kelebihan Git. Cuba tukar ke branch <code>master</code> semula menggunakan <code>git
-checkout master</code>. Kemudian, buka file <code>bola.txt</code> dan kita boleh lihat file
+checkout master</code>. Kemudian, buka file <code>bola.txt</code> dan kita boleh melihat file
 tersebut tiada seksyen rujukan. Tukar semula ke branch <code>rujukan</code> (<code>git checkout
-rujukan</code>) baru ada balik seksyen rujukan.</p>
+rujukan</code>) dan seksyen rujukan kembali ada.</p>
 <p>Kita boleh menggunakan teknik ini untuk membuat deployment. Katakanlah kita
 membuat website. Code yang sudah siap berada di branch <code>master</code>. Kemudian, kita
 nak tambah feature baru dalam website, kita commit feature baru ke branch <code>dev</code>
 untuk development. Pada masa yang sama, bos suruh deploy website sekarang, maka
-kita pun tukar ke branch <code>master</code>, deploy, tukar balik ke branch <code>dev</code>, sambung
-develop feature baru.</p>
+kita pun tukar ke branch <code>master</code> lalu deploy, kemudian tukar balik ke branch
+<code>dev</code>untuk kembali sambung develop feature baru.</p>
 <hr>
-<p>Sekarang kita siapkan branch <code>rujukan</code> sebelum ini, kita tambah rujukan menjadi,</p>
+<p>Sekarang kita siapkan branch <code>rujukan</code> yang kita buat sebelum ini, kita tambah
+rujukan menjadi,</p>
 <pre><code>rujukan: masam masam manis - p ramli
-</code></pre><p>dan seperti biasa, <code>git add bola.txt</code>, dan</p>
-<pre><code>git commit -m &quot;Tambah rujukan&quot;
+</code></pre><p>dan seperti biasa,</p>
+<pre><code>git add bola.txt
+git commit -m &quot;Tambah rujukan&quot;
 </code></pre><p>Pastikan anda berada dalam branch <code>rujukan</code> semasa commit.</p>
 <h2 id="git-merge">git merge</h2>
 <p>Ada dua cara untuk <em>merge</em>(gabungkan) branch ke branch <code>master</code>.</p>
 <ul>
-<li>Yang pertama, kita push ke website branch yang baru menggunakan <code>git push</code>.
-Kemudian merge menggunakan website.</li>
+<li>Cara pertama, kita terus push branch yang baru ke website menggunakan <code>git
+push</code>. Kemudian merge menggunakan website.</li>
 <li>Cara kedua, kita guna command <code>git merge</code>.</li>
 </ul>
-<p>Untuk cara <code>git push</code>, contoh untuk push branch baru ke website cuma perlu tukar
-nama ke branch baru, contohnya,</p>
+<p>Untuk cara pertama, cuma perlu tukar master ke nama branch baru untuk push
+branch baru ke website, contohnya,</p>
 <pre><code>git push origin rujukan
 </code></pre><p>Check website dan sepatutnya anda boleh lihat repository ada branch <code>rujukan</code>.
-Godek-godek website untuk mencari cara untuk merge. Setelah berjaya, tukar
-branch ke <code>master</code> di komputer kita dan pull daripada master (<code>git pull origin
-master</code>) untuk mendapatkan update terkini.</p>
-<p>Untuk cara <code>git merge</code>, tukar branch ke <code>master</code> di komputer. Kemudian taip <code>git
-merge rujukan</code>. Setelah selesai boleh push ke master (<code>git push origin master</code>).</p>
-<p>Saya lebih suka menggunakan cara pertama kerana di website boleh lihat perubahan
-dengan lebih jelas.</p>
+Ambil masa untuk meneroka website untuk mencari cara untuk merge. Setelah
+berjaya, tukar branch ke <code>master</code> di komputer kita dan pull daripada master
+(<code>git pull origin master</code>) untuk mendapatkan update terkini.</p>
+<p>Untuk cara kedua, tukar branch ke <code>master</code> di komputer. Kemudian taip <code>git merge
+rujukan</code>. Setelah selesai boleh push ke master (<code>git push origin master</code>).</p>
+<p>Saya lebih suka menggunakan cara pertama kerana kita boleh melihat perubahan
+dengan lebih jelas di website.</p>
 <h2 id="delete-branch">Delete branch</h2>
 <p>Setelah berjaya merge, kita boleh delete branch menggunakan <code>git branch -d
 rujukan</code>. Kadang-kadang kita tidak boleh delete jika branch tersebut seperti
@@ -411,7 +471,7 @@ yakin kita sudah merge.</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Branch","level":"1.3.1","depth":2,"next":{"title":"Conflict","level":"1.3.2","depth":2,"path":"workflow/conflict.md","ref":"workflow/conflict.md","articles":[]},"previous":{"title":"Workflow","level":"1.3","depth":1,"path":"workflow/README.md","ref":"workflow/README.md","articles":[{"title":"Branch","level":"1.3.1","depth":2,"path":"workflow/branch.md","ref":"workflow/branch.md","articles":[]},{"title":"Conflict","level":"1.3.2","depth":2,"path":"workflow/conflict.md","ref":"workflow/conflict.md","articles":[]},{"title":"Continuous Delivery","level":"1.3.3","depth":2,"path":"workflow/continuous-delivery.md","ref":"workflow/continuous-delivery.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["sitemap-general"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"https://www.jombelajarjava.com/git/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Burhanuddin Baharuddin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Belajar Git","language":"ms","gitbook":"*","description":"Belajar Git, lihat sejarah perubahan pada code anda sepanjang development"},"file":{"path":"workflow/branch.md","mtime":"2018-11-28T09:45:10.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-30T07:27:38.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Branch","level":"1.3.1","depth":2,"next":{"title":"Conflict","level":"1.3.2","depth":2,"path":"workflow/conflict.md","ref":"workflow/conflict.md","articles":[]},"previous":{"title":"Workflow","level":"1.3","depth":1,"path":"workflow/README.md","ref":"workflow/README.md","articles":[{"title":"Branch","level":"1.3.1","depth":2,"path":"workflow/branch.md","ref":"workflow/branch.md","articles":[]},{"title":"Conflict","level":"1.3.2","depth":2,"path":"workflow/conflict.md","ref":"workflow/conflict.md","articles":[]},{"title":"Continuous Delivery","level":"1.3.3","depth":2,"path":"workflow/continuous-delivery.md","ref":"workflow/continuous-delivery.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["sitemap-general"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"https://www.jombelajarjava.com/git/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Burhanuddin Baharuddin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Belajar Git","language":"ms","gitbook":"*","description":"Belajar Git, lihat sejarah perubahan pada code anda sepanjang development"},"file":{"path":"workflow/branch.md","mtime":"2018-12-01T04:40:10.539Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-01T10:12:41.458Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

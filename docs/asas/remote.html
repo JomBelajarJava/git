@@ -244,6 +244,64 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4" data-path="../extra/">
+            
+                <a href="../extra/">
+            
+                    
+                    Extra
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../extra/git-add.html">
+            
+                <a href="../extra/git-add.html">
+            
+                    
+                    git add
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../extra/git-checkout.html">
+            
+                <a href="../extra/git-checkout.html">
+            
+                    
+                    git checkout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../extra/git-rebase.html">
+            
+                <a href="../extra/git-rebase.html">
+            
+                    
+                    git rebase
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -296,28 +354,31 @@ kiralah server sendiri atau website seperti GitHub, GitLab, dan Bitbucket. Jadi,
 jika anda masih belum daftar mana-mana website tersebut, anda boleh daftar
 sekarang untuk mengikuti tutorial ini.</p>
 <h2 id="repository">Repository</h2>
-<p>Setelah daftar, anda boleh bina repository untuk projek. Repository ialah tempat
-untuk letak code. Untuk tutorial ini kita gunakan nama yang sama dengan nama
+<p>Setelah mendaftar, anda boleh membina repository untuk projek. Repository ialah
+tempat untuk meletakkan code. Kita boleh menggunakan nama yang sama dengan nama
 folder yang telah kita buat untuk nama repository, iaitu <code>cikgu</code>.</p>
-<p>Cara untuk create repository berbeza mengikut website, jadi godek-godeklah
-website tersebut.</p>
-<p>Setelah bina repository, biasanya website akan menunjukkan cara untuk upload
+<p>Cara untuk create repository berbeza mengikut website. Jadi, anda boleh ambil
+masa untuk meneroka website tersebut.</p>
+<p>Setelah membina repository, biasanya website akan menunjukkan cara untuk upload
 code. Ikut sahaja arahan tersebut.</p>
 <h2 id="git-remote">git remote</h2>
 <p>Antara arahan yang anda perlu ikut ialah command <code>git remote</code>. Kita boleh
 menggunakan <code>git remote</code> untuk menetapkan url untuk upload code di website
 tersebut.</p>
 <p>Dalam arahan, biasanya ada command seperti ini,</p>
-<pre><code>git remote add origin github.com:namasaya/cikgu.git
+<pre><code>git remote add origin https://github.com:namasaya/cikgu.git
 </code></pre><p>misalannya.</p>
 <p><code>git remote add origin</code> bermaksud kita tambah url kemudian tetapkan nama
 <code>origin</code> untuk url tersebut.</p>
 <h2 id="git-push">git push</h2>
-<p><code>git push</code> ialah command yang akan menguploadkan code kita ke website berkenaan. Jika anda mengikut arahan website, anda mungkin perlu menaip,</p>
+<p><code>git push</code> ialah command yang akan upload code kita ke website berkenaan. Jika
+anda mengikuti arahan website, anda mungkin perlu menaip,</p>
 <pre><code>git push -u origin master
 </code></pre><p>Jadi, Git akan <em>push</em>(upload) code ke url origin yang telah kita tetapkan
-sebelum ini ke branch master. Kita akan lihat dengan lebih jelas mengenai branch
-pada tutorial akan datang.</p>
+sebelum ini ke branch master.</p>
+<blockquote>
+<p>Kita akan lihat dengan lebih jelas mengenai branch pada tutorial akan datang.</p>
+</blockquote>
 <p>Huruf <code>-u</code> hanya perlu ditulis jika kita upload buat pertama kali. Selepas ini
 kita hanya perlu tulis</p>
 <pre><code>git push origin master
@@ -325,11 +386,11 @@ kita hanya perlu tulis</p>
 <p>Setelah selesai push, anda boleh refresh website tersebut dan anda boleh melihat
 dan meneroka file-file yang telah diupload.</p>
 <h2 id="git-clone">git clone</h2>
-<p>Sebagai demo, kita akan padam folder <code>cikgu</code> yang telah kita buat di komputer
+<p>Sebagai demo, kita akan padam folder <code>cikgu</code> yang telah kita bina di komputer
 kita untuk cuba download kembali file-file tersebut.</p>
 <p><code>git clone</code> ialah command untuk download seluruh projek dari remote. Jadi, download kembali projek <code>cikgu</code> dengan menaip,</p>
-<pre><code>git clone github.com:namasaya/cikgu.git
-</code></pre><p>Url tersebut bergantung kepada url anda.</p>
+<pre><code>git clone https://github.com:namasaya/cikgu.git
+</code></pre><p>Url tersebut bergantung kepada url repository anda.</p>
 <h2 id="git-pull">git pull</h2>
 <p><code>git pull</code> pula ialah command untuk download hanya perubahan code, bukan seluruh
 projek. Jika anda menggunakan website, anda boleh edit file di website.
@@ -379,7 +440,7 @@ Kemudian, anda boleh cuba download perubahan menggunakan</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Remote","level":"1.2.5","depth":2,"next":{"title":"Workflow","level":"1.3","depth":1,"path":"workflow/README.md","ref":"workflow/README.md","articles":[{"title":"Branch","level":"1.3.1","depth":2,"path":"workflow/branch.md","ref":"workflow/branch.md","articles":[]},{"title":"Conflict","level":"1.3.2","depth":2,"path":"workflow/conflict.md","ref":"workflow/conflict.md","articles":[]},{"title":"Continuous Delivery","level":"1.3.3","depth":2,"path":"workflow/continuous-delivery.md","ref":"workflow/continuous-delivery.md","articles":[]}]},"previous":{"title":"Web Hosting","level":"1.2.4","depth":2,"path":"asas/web-hosting.md","ref":"asas/web-hosting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sitemap-general"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"https://www.jombelajarjava.com/git/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Burhanuddin Baharuddin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Belajar Git","language":"ms","gitbook":"*","description":"Belajar Git, lihat sejarah perubahan pada code anda sepanjang development"},"file":{"path":"asas/remote.md","mtime":"2018-11-27T14:43:16.737Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-30T07:27:38.641Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Remote","level":"1.2.5","depth":2,"next":{"title":"Workflow","level":"1.3","depth":1,"path":"workflow/README.md","ref":"workflow/README.md","articles":[{"title":"Branch","level":"1.3.1","depth":2,"path":"workflow/branch.md","ref":"workflow/branch.md","articles":[]},{"title":"Conflict","level":"1.3.2","depth":2,"path":"workflow/conflict.md","ref":"workflow/conflict.md","articles":[]},{"title":"Continuous Delivery","level":"1.3.3","depth":2,"path":"workflow/continuous-delivery.md","ref":"workflow/continuous-delivery.md","articles":[]}]},"previous":{"title":"Web Hosting","level":"1.2.4","depth":2,"path":"asas/web-hosting.md","ref":"asas/web-hosting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["sitemap-general"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"https://www.jombelajarjava.com/git/"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Burhanuddin Baharuddin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Belajar Git","language":"ms","gitbook":"*","description":"Belajar Git, lihat sejarah perubahan pada code anda sepanjang development"},"file":{"path":"asas/remote.md","mtime":"2018-12-01T04:19:55.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-01T10:12:41.458Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
