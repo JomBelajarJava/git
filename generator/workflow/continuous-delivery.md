@@ -17,7 +17,7 @@ untuk code.
 ## Platform as a service(PaaS)
 
 PaaS ialah servis untuk menjalankan application. Ada PaaS yang boleh menggunakan
-Git repository untuk terus build application kita setiap kali kita push code,
+Git repository untuk terus build application setiap kali kita push code,
 contohnya [Heroku](https://www.heroku.com/) dan
 [Dokku](http://dokku.viewdocs.io/dokku/). Oleh sebab itu, kita perlu memisahkan
 code yang masih belum sempurna supaya PaaS tidak build code tersebut.
@@ -35,8 +35,8 @@ menggunakan *issue tracking system* untuk menyenaraikan bug dan penambahbaikan
 yang ingin dilakukan. Sistem ini akan memberikan nombor tiket untuk setiap issue
 tersebut. Jadi, kita boleh menggunakan nombor tiket untuk nama branch kita.
 
-Setelah memilih issue yang perlu diselesaikan, kita pun buat branch dari branch
-`dev`. Setelah selesai, kita merge dengan branch `dev.`
+Setelah memilih issue yang perlu diselesaikan, kita pun bina branch dari branch
+`dev`. Setelah selesai menulis code, kita merge dengan branch `dev.`
 
 ## Automated testing
 
@@ -51,8 +51,8 @@ bertanggungjawab membaiki code tersebut.
 Setelah selesai, maka branch `dev` tersebut sudah siap sedia untuk diupdate ke
 branch `master` untuk release.
 
-> Ada sesetengah team boleh memilih untuk update ke branch `staging` sebelum ke
-> branch `master` untuk testing dalaman.
+> Ada sesetengah team memilih untuk update ke branch `staging` sebelum ke branch
+> `master` untuk testing dalaman.
 
 ----
 
@@ -71,9 +71,9 @@ sehingga semua code dalam branch `dev` melepasi testing. Branch `dev` juga
 mungkin masih belum sedia untuk release, tetapi kita perlukan hotfix sekarang.
 
 Bagi mengatasi masalah di atas, kita boleh membuat branch baru dari branch
-`master` dengan nama `hotfix`. DevOps pun boleh pasang *automated testing* untuk
-branch tersebut. Kemudian, programmer yang mengambil tiket berkenaan boleh
-membuat branch dari branch `hotfix` untuk membuat hotfix. Setelah siap, dia
+`master` dengan nama `hotfix`. DevOps pun boleh memasang *automated testing*
+untuk branch tersebut. Kemudian, programmer yang mengambil tiket berkenaan boleh
+membina branch dari branch `hotfix` untuk membuat hotfix. Setelah siap, dia
 boleh merge branch tersebut ke branch `hotfix` untuk testing. Pada masa yang
 sama, dia juga perlu merge branch tersebut ke branch `dev` supaya branch `dev`
 dapat update yang terkini, dan supaya kerjanya ada dalam rekod. Apabila tiada
