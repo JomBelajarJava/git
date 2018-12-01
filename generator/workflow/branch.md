@@ -5,20 +5,19 @@ perubahan yang ingin kita lakukan.
 
 Contohnya, katakanlah kita sedang menulis esei dan kita ingin menulis
 pendahuluan, disebabkan tidak cukup masa, pendahuluan masih belum siap, maka
-bahagian tersebut kita save dahulu dengan commit ke branch `pendahuluan`,
-kemudian sambung pada lain hari. Esoknya, kita sambung tulis pendahuluan dan
-commit perubahan ke branch `pendahuluan`. Setelah selesai, kita gabungkan branch
-`pendahuluan` dengan branch `master`.
+bahagian tersebut kita save dahulu dengan commit ke branch `pendahuluan`.
+Esoknya, kita sambung menulis pendahuluan dan commit ke branch `pendahuluan`.
+Setelah selesai, kita gabungkan branch `pendahuluan` dengan branch `master`.
 
 Branch `master` ialah cabang utama untuk code. Dari contoh di atas, katakanlah
 kita terus commit pendahuluan ke branch `master`, maka orang akan terus dapat
-baca pendahuluan yang masih belum siap.
+membaca pendahuluan yang masih belum siap.
 
 Kita boleh membuat branch tidak kira berapa banyak yang kita mahu. Dengan ini,
 kita boleh menggunakan branch jika kita berkerja dalam kumpulan. Contoh seorang
-sedang menulis pendahuluan dalam branch `pendahuluan` dan seorang lagi menulis
-penutup dalam branch `penutup`. Jadi, mereka tidak perlu berebut mana satu yang
-perlu save dahulu.
+sedang menulis pendahuluan dalam branch `pendahuluan` dan seorang lagi sedang
+menulis penutup dalam branch `penutup`. Jadi, mereka tidak perlu berebut mana
+satu yang perlu save dahulu.
 
 ## git branch
 
@@ -36,8 +35,8 @@ create branch dengan nama `rujukan`
 git checkout -b rujukan
 ```
 
-Kemudian, taip `git branch` sekali lagi untuk melihat branch yang ada. Dalam
-console jika diperhatikan, branch `rujukan` berwarna hijau dan mempunyai
+Kemudian, taip `git branch` sekali lagi untuk melihat branch yang ada. Jika
+diperhatikan dalam console, branch `rujukan` berwarna hijau dan mempunyai
 *asterisk*(*) di tepinya. Ini menandakan sekarang kita sedang berada dalam
 branch `rujukan`.
 
@@ -53,37 +52,40 @@ hari-hari cikgu main bola
 rujukan:
 ```
 
-Kemudian buat seperti biasa, `git add bola.txt` dan
+Kemudian buat seperti biasa,
 
 ```
+git add bola.txt
 git commit -m "Tambah seksyen rujukan"
 ```
 
 ## File bertukar mengikut branch
 
 Ini antara kelebihan Git. Cuba tukar ke branch `master` semula menggunakan `git
-checkout master`. Kemudian, buka file `bola.txt` dan kita boleh lihat file
+checkout master`. Kemudian, buka file `bola.txt` dan kita boleh melihat file
 tersebut tiada seksyen rujukan. Tukar semula ke branch `rujukan` (`git checkout
-rujukan`) baru ada balik seksyen rujukan.
+rujukan`) dan seksyen rujukan kembali ada.
 
 Kita boleh menggunakan teknik ini untuk membuat deployment. Katakanlah kita
 membuat website. Code yang sudah siap berada di branch `master`. Kemudian, kita
 nak tambah feature baru dalam website, kita commit feature baru ke branch `dev`
 untuk development. Pada masa yang sama, bos suruh deploy website sekarang, maka
-kita pun tukar ke branch `master`, deploy, tukar balik ke branch `dev`, sambung
-develop feature baru.
+kita pun tukar ke branch `master` lalu deploy, kemudian tukar balik ke branch
+`dev`untuk kembali sambung develop feature baru.
 
 ----
 
-Sekarang kita siapkan branch `rujukan` sebelum ini, kita tambah rujukan menjadi,
+Sekarang kita siapkan branch `rujukan` yang kita buat sebelum ini, kita tambah
+rujukan menjadi,
 
 ```
 rujukan: masam masam manis - p ramli
 ```
 
-dan seperti biasa, `git add bola.txt`, dan
+dan seperti biasa,
 
 ```
+git add bola.txt
 git commit -m "Tambah rujukan"
 ```
 
@@ -93,27 +95,27 @@ Pastikan anda berada dalam branch `rujukan` semasa commit.
 
 Ada dua cara untuk *merge*(gabungkan) branch ke branch `master`.
 
-* Yang pertama, kita push ke website branch yang baru menggunakan `git push`.
-Kemudian merge menggunakan website.
+* Cara pertama, kita terus push branch yang baru ke website menggunakan `git
+push`. Kemudian merge menggunakan website.
 * Cara kedua, kita guna command `git merge`.
 
-Untuk cara `git push`, contoh untuk push branch baru ke website cuma perlu tukar
-nama ke branch baru, contohnya,
+Untuk cara pertama, cuma perlu tukar master ke nama branch baru untuk push
+branch baru ke website, contohnya,
 
 ```
 git push origin rujukan
 ```
 
 Check website dan sepatutnya anda boleh lihat repository ada branch `rujukan`.
-Godek-godek website untuk mencari cara untuk merge. Setelah berjaya, tukar
-branch ke `master` di komputer kita dan pull daripada master (`git pull origin
-master`) untuk mendapatkan update terkini.
+Ambil masa untuk meneroka website untuk mencari cara untuk merge. Setelah
+berjaya, tukar branch ke `master` di komputer kita dan pull daripada master
+(`git pull origin master`) untuk mendapatkan update terkini.
 
-Untuk cara `git merge`, tukar branch ke `master` di komputer. Kemudian taip `git
-merge rujukan`. Setelah selesai boleh push ke master (`git push origin master`).
+Untuk cara kedua, tukar branch ke `master` di komputer. Kemudian taip `git merge
+rujukan`. Setelah selesai boleh push ke master (`git push origin master`).
 
-Saya lebih suka menggunakan cara pertama kerana di website boleh lihat perubahan
-dengan lebih jelas.
+Saya lebih suka menggunakan cara pertama kerana kita boleh melihat perubahan
+dengan lebih jelas di website.
 
 ## Delete branch
 
