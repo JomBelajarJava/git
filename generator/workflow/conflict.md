@@ -55,7 +55,7 @@ git merge format
 git merge typo
 ```
 
-dan kita boleh lihat CONFLICT terpapar di console di file `bola.txt`.
+dan kita boleh lihat CONFLICT pada file `bola.txt` terpapar di console.
 
 Buka file `bola.txt` dan kita dapat lihat file tersebut menjadi seperti berikut
 
@@ -113,9 +113,9 @@ opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecme
 Senarai software boleh dilihat di situ iaitu opendiff, kdiff3, tkdiff dan
 lain-lain.
 
-Saya ada setup meld untuk mergetool, rupa dia begini:
+Saya ada setup meld untuk mergetool, rupanya begini:
 
 ![Gambar meld, salah satu mergetool](img/meld.png)
 
-Tetapi saya tidak pandai guna. Kalau anda suka guna GUI boleh cuba mana-mana
-software tersebut. Kawan sekerja saya dulu recommend p4merge.
+Tetapi saya tidak pandai guna. Kalau anda suka menggunakan GUI, anda boleh
+mencuba mana-mana software tersebut. Kawan sekerja saya dulu recommend p4merge.
