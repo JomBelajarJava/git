@@ -8,14 +8,14 @@ sekarang untuk mengikuti tutorial ini.
 
 ## Repository
 
-Setelah daftar, anda boleh bina repository untuk projek. Repository ialah tempat
-untuk letak code. Untuk tutorial ini kita gunakan nama yang sama dengan nama
+Setelah mendaftar, anda boleh membina repository untuk projek. Repository ialah
+tempat untuk meletakkan code. Kita boleh menggunakan nama yang sama dengan nama
 folder yang telah kita buat untuk nama repository, iaitu `cikgu`.
 
-Cara untuk create repository berbeza mengikut website, jadi godek-godeklah
-website tersebut.
+Cara untuk create repository berbeza mengikut website. Jadi, anda boleh ambil
+masa untuk meneroka website tersebut.
 
-Setelah bina repository, biasanya website akan menunjukkan cara untuk upload
+Setelah membina repository, biasanya website akan menunjukkan cara untuk upload
 code. Ikut sahaja arahan tersebut.
 
 ## git remote
@@ -27,7 +27,7 @@ tersebut.
 Dalam arahan, biasanya ada command seperti ini,
 
 ```
-git remote add origin github.com:namasaya/cikgu.git
+git remote add origin https://github.com:namasaya/cikgu.git
 ```
 
 misalannya.
@@ -37,15 +37,17 @@ misalannya.
 
 ## git push
 
-`git push` ialah command yang akan menguploadkan code kita ke website berkenaan. Jika anda mengikut arahan website, anda mungkin perlu menaip,
+`git push` ialah command yang akan upload code kita ke website berkenaan. Jika
+anda mengikuti arahan website, anda mungkin perlu menaip,
 
 ```
 git push -u origin master
 ```
 
 Jadi, Git akan *push*(upload) code ke url origin yang telah kita tetapkan
-sebelum ini ke branch master. Kita akan lihat dengan lebih jelas mengenai branch
-pada tutorial akan datang.
+sebelum ini ke branch master.
+
+> Kita akan lihat dengan lebih jelas mengenai branch pada tutorial akan datang.
 
 Huruf `-u` hanya perlu ditulis jika kita upload buat pertama kali. Selepas ini
 kita hanya perlu tulis
@@ -61,16 +63,16 @@ dan meneroka file-file yang telah diupload.
 
 ## git clone
 
-Sebagai demo, kita akan padam folder `cikgu` yang telah kita buat di komputer
+Sebagai demo, kita akan padam folder `cikgu` yang telah kita bina di komputer
 kita untuk cuba download kembali file-file tersebut.
 
 `git clone` ialah command untuk download seluruh projek dari remote. Jadi, download kembali projek `cikgu` dengan menaip,
 
 ```
-git clone github.com:namasaya/cikgu.git
+git clone https://github.com:namasaya/cikgu.git
 ```
 
-Url tersebut bergantung kepada url anda.
+Url tersebut bergantung kepada url repository anda.
 
 ## git pull
 
