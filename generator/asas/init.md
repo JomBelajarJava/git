@@ -1,12 +1,12 @@
 # Init
 
 Dalam tutorial ini, kita akan lihat bagaimana untuk menjadikan sesuatu folder
-sebagai projek yang boleh dijejaki oleh Git. Sebelum menggunakan Git, kita buat
+sebagai projek yang boleh dijejaki oleh Git. Sebelum menggunakan Git, kita bina
 satu folder berserta file yang boleh kita gunakan sebagai contoh.
 
 Jika anda menggunakan Windows, memang mudahlah. Klik kanan, pilih `New folder`.
 Namakan folder `cikgu`. Kemudian, di dalam folder berkenaan, klik kanan, pilih
-`New Text document`, namakan file `bola.txt`.
+`New Text document`, namakan file tersebut `bola.txt`.
 
 Jika anda menggunakan Linux, taip `mkdir cikgu` untuk bina folder `cikgu`.
 Kemudian, pergi ke dalam folder dengan menaip `cd cikgu`. Di dalam folder
@@ -22,8 +22,8 @@ cikgu suka main bola
 dan save.
 
 Selepas ini, saya hanya akan tunjuk command untuk penggunaan Git di terminal.
-Jika anda menggunakan GUI client, anda boleh godek-godek software berkenaan
-untuk mencari command yang sama.
+Jika anda menggunakan GUI client, anda boleh teroka software berkenaan untuk
+mencari command yang sama.
 
 ## git init
 
