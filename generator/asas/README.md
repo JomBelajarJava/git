@@ -1,3 +1,7 @@
+---
+description: Belajar asas penggunaan Git
+---
+
 # Asas
 
 Kita akan memulakan tutorial Git dengan yang paling asas. Kita akan belajar cara

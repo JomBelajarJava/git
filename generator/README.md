@@ -1,3 +1,8 @@
+---
+date: 2018-11-27
+description: Belajar Git, lihat sejarah perubahan pada code anda sepanjang development
+---
+
 # Belajar Git
 
 Git ialah sesuatu yang dinamakan *version-control system*. *Version-control

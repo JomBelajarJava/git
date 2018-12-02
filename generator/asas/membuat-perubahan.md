@@ -1,3 +1,8 @@
+---
+date: 2018-11-27
+description: Edit file dan lihat perubahan file melalui Git. Juga melihat command untuk menyenaraikan sejarah perubahan tersebut.
+---
+
 # Membuat Perubahan
 
 Kita akan melihat apa yang membuatkan programmer memilih Git semasa membuat

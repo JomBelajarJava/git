@@ -1,3 +1,8 @@
+---
+date: 2018-12-01
+description: Melihat kegunaan lain yang ada pada command git checkout.
+---
+
 # git checkout
 
 `git checkout` ada satu lagi kegunaan selain menukar branch. Jika anda menaip

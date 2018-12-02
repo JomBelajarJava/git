@@ -1,3 +1,8 @@
+---
+date: 2018-11-30
+description: Bab ekstra untuk melihat command-command yang belum dilihat tetapi patut diberitahu.
+---
+
 # Extra
 
 Ada banyak lagi command-command lain untuk Git yang kita masih belum teroka.

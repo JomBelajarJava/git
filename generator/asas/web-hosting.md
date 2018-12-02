@@ -1,3 +1,8 @@
+---
+date: 2018-11-27
+description: Melihat antara website-website popular yang boleh digunakan untuk host server Git, iaitu GitHub, GitLab, dan Bitbucket.
+---
+
 # Web Hosting
 
 Pada mulanya programmer menggunakan Git di server masing-masing. Sekarang telah

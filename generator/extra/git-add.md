@@ -1,3 +1,8 @@
+---
+date: 2018-11-30
+description: Melihat flag yang boleh ditambah pada git add bagi memudahkan pemilihan file-file dalam Git.
+---
+
 # git add
 
 Kita telah menggunakan command ini untuk memilih file yang ingin kita tambah ke

@@ -1,3 +1,8 @@
+---
+date: 2018-12-01
+description: Melihat command git rebase untuk mengatur sejarah commit supaya lebih kemas dan teratur.
+---
+
 # git rebase
 
 Katakanlah ada team developer yang sedang membuat website design.

@@ -1,3 +1,8 @@
+---
+date: 2018-11-28
+description: Menyelesaikan conflict jika beberapa branch mengubah file pada baris yang sama. Juga melihat antara software lain yang boleh digunakan.
+---
+
 # Conflict
 
 Memang tidak dapat dielakkan, ada masa mungkin beberapa branch terpaksa edit

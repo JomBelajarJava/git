@@ -1,3 +1,8 @@
+---
+date: 2018-11-27
+description: Melihat cara untuk memasang atau install Git dalam komputer anda. Juga melihat senarai GUI client yang boleh digunakan.
+---
+
 # Installation
 
 Git merupakan *console application*. Jadi, kita perlu menggunakan terminal atau

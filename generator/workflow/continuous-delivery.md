@@ -1,3 +1,8 @@
+---
+date: 2018-11-29
+description: Melihat proses-proses development di tempat kerja yang menggunakan metodologi yang disyorkan.
+---
+
 # Continuous Delivery
 
 > Tutorial ini hanya untuk team yang ingin mengikuti cara development yang

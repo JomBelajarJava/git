@@ -1,3 +1,8 @@
+---
+date: 2018-11-28
+description: Membuat cabang dalam Git supaya perubahan file-file boleh dilakukan dengan sempurna. Melihat cara untuk bina, tukar, dan padam branch.
+---
+
 # Branch
 
 *Branch* bermaksud cabang. Kita boleh menganggap branch sebagai niat atau tujuan

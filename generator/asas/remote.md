@@ -1,3 +1,8 @@
+---
+date: 2018-11-27
+description: Melihat cara untuk push atau mengupload code ke remote, iaitu server yang host Git, atau website-website seperti GitHub, GitLab, dan Bitbucket.
+---
+
 # Remote
 
 Remote bermaksud sesuatu yang jauh. Kalau ternampak perkataan remote dalam Git,

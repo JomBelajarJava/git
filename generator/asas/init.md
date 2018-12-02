@@ -1,3 +1,8 @@
+---
+date: 2018-11-27
+description: Jadikan sesuatu folder atau projek boleh dijejaki oleh Git. Command-command asas juga diperkenalkan.
+---
+
 # Init
 
 Dalam tutorial ini, kita akan lihat bagaimana untuk menjadikan sesuatu folder

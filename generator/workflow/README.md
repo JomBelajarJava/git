@@ -1,3 +1,8 @@
+---
+date: 2018-11-28
+description: Melihat aliran kerja semasa menggunakan Git untuk menguruskan perubahan file.
+---
+
 # Workflow (Aliran Kerja)
 
 Dalam bab ini, kita akan melihat bagaimana kita boleh menggunakan Git untuk
