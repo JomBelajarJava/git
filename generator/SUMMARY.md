@@ -6,6 +6,7 @@
     * [Installation](asas/installation.md)
     * [Init](asas/init.md)
     * [Membuat Perubahan](asas/membuat-perubahan.md)
+    * [Mengabaikan File](asas/mengabaikan-file.md)
     * [Web Hosting](asas/web-hosting.md)
     * [Remote](asas/remote.md)
 
