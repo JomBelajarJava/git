@@ -3,10 +3,13 @@
     "description": "Belajar Git, lihat sejarah perubahan pada code anda sepanjang development",
     "author": "Burhanuddin Baharuddin",
     "language": "ms",
-    "plugins": ["sitemap-general"],
+    "plugins": ["sitemap-general", "analytics"],
     "pluginsConfig": {
         "sitemap-general": {
             "prefix": "https://www.jombelajarjava.com/git/"
+        },
+        "analytics": {
+            "google": "UA-64328787-1"
         }
     }
 }
