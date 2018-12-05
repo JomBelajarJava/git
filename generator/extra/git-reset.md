@@ -1,3 +1,8 @@
+---
+date: 2018-12-05
+description: git reset ialah command yang berlawanan dengan git add. Jika kita tersilap memilih file menggunakan git add, kita boleh reset kembali pemilihan tersebut.
+---
+
 # git reset
 
 `git reset` ialah command yang berlawanan dengan `git add`. Jika kita tersilap
