@@ -3,7 +3,7 @@
     "description": "Belajar Git, lihat sejarah perubahan pada code anda sepanjang development",
     "author": "Burhanuddin Baharuddin",
     "language": "ms",
-    "plugins": ["sitemap-general", "pageload-analytics@git+https://github.com/burhanloey/gitbook-plugin-pageload-analytics.git"],
+    "plugins": ["sitemap-general", "pageload-analytics"],
     "pluginsConfig": {
         "sitemap-general": {
             "prefix": "https://www.jombelajarjava.com/git/"

@@ -3,8 +3,7 @@ require([
     'jquery'
 ], function(gitbook, $) {
     gitbook.events.on('page.change', function() {
-        ga(function(tracker) {
-            console.log('tracker= ' + tracker);
-        });
+        ga('set', 'location', window.location.href);
+        ga('send', 'pageview');
     });
 });
