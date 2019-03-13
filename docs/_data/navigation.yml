@@ -1,0 +1,32 @@
+chapters:
+  - url: pengenalan
+    title: Pengenalan
+  - url: asas
+    title: Bab 1 - Asas
+  - url: workflow
+    title: Bab 2 - Workflow
+  - url: extra
+    title: Bab 3 - Extra
+
+asas:
+  - url: installation
+  - url: init
+  - url: membuat-perubahan
+  - url: mengabaikan-file
+  - url: web-hosting
+  - url: remote
+
+workflow:
+  - url: branch
+  - url: conflict
+  - url: continuous-delivery
+
+extra:
+  - url: git-add
+    title: git add
+  - url: git-reset
+    title: git reset
+  - url: git-checkout
+    title: git checkout
+  - url: git-rebase
+    title: git rebase
