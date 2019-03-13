@@ -45,7 +45,7 @@ diperhatikan dalam console, branch `rujukan` berwarna hijau dan mempunyai
 *asterisk*(*) di tepinya. Ini menandakan sekarang kita sedang berada dalam
 branch `rujukan`.
 
-![Gambar branch rujukan](img/create_branch_rujukan.png)
+![Gambar branch rujukan]({{ site.baseurl }}/assets/img/create_branch_rujukan.png)
 
 Sekarang kita cuba commit sesuatu dalam branch `rujukan`. Tambah tajuk untuk
 seksyen rujukan. Kandungan file `bola.txt` akan menjadi begini,

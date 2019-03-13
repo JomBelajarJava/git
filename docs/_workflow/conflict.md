@@ -120,7 +120,7 @@ lain-lain.
 
 Saya ada setup meld untuk mergetool, rupanya begini:
 
-![Gambar meld, salah satu mergetool](img/meld.png)
+![Gambar meld, salah satu mergetool]({{ site.baseurl }}/assets/img/meld.png)
 
 Tetapi saya tidak pandai guna. Kalau anda suka menggunakan GUI, anda boleh
 mencuba mana-mana software tersebut. Kawan sekerja saya dulu recommend p4merge.

@@ -40,7 +40,7 @@ itu bermakna ada bahagian yang dipadam.
 
 Ini gambar yang menunjukkan perbezaan tersebut.
 
-![Gambar git diff](img/git_diff.png)
+![Gambar git diff]({{ site.baseurl }}/assets/img/git_diff.png)
 
 Jika anda menggunakan GUI client, perbezaan tersebut mungkin lebih jelas.
 

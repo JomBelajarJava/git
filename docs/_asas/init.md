@@ -74,7 +74,7 @@ yang berubah.
 
 Jika anda mengikuti tutorial sampai di sini. Terminal anda akan kelihatan seperti ini,
 
-![Gambar untuk tutorial ini](img/init.png)
+![Gambar untuk tutorial ini]({{ site.baseurl }}/assets/img/init.png)
 
 Ketiga-tiga command iaitu `git status`, `git add`, dan `git commit` ialah
 command yang akan selalu kita gunakan semasa membuat development.

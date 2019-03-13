@@ -42,7 +42,7 @@ membuat beberapa operasi pada commit yang ada dalam branch.
 Selepas menulis command tersebut, text editor akan terbuka dengan senarai
 commit berserta arahan. Rupanya begini:
 
-![Gambar git rebase interactive](img/git_rebase_interactive.png)
+![Gambar git rebase interactive]({{ site.baseurl }}/assets/img/git_rebase_interactive.png)
 
 Katakanlah kita mahu menukar message untuk commit 'Hello' di atas, kita edit
 command menjadi seperti berikut:
