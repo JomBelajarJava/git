@@ -1,6 +1,7 @@
 ---
 date: 2018-11-30
 permalink: /:collection/
+title: Extra
 description: Bab ekstra untuk melihat command-command yang belum dilihat tetapi patut diberitahu.
 ---
 

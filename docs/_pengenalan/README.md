@@ -1,6 +1,7 @@
 ---
 date: 2018-11-27
 permalink: /:collection/
+title: Pengenalan
 description: Belajar Git, lihat sejarah perubahan pada code anda sepanjang development
 ---
 

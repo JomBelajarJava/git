@@ -1,6 +1,7 @@
 ---
 date: 2018-11-28
 permalink: /:collection/
+title: Workflow
 description: Melihat aliran kerja semasa menggunakan Git untuk menguruskan perubahan file.
 ---
 
